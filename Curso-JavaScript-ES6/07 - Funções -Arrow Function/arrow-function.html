@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funções - Arrow Function</title>
+
+	<script>
+		
+		/*
+		let quadrado = function(x = 0) { // valor default para o paramentro
+			return x * x;
+		}
+		*/
+
+		/*
+		// arrow function
+		let quadrado = (x)=> {
+			return x * x;
+		}
+		*/
+
+		// arrow function - não precisa usar () caso apenas tenha um paramentro
+		// sem parametro, é obrigatorio usar () para evitar erro de sintaxe
+		/*
+		let quadrado = x=> {
+			return x * x;
+		}
+		*/
+
+		// return implicito
+		//let quadrado = x=>  x * x;
+
+		//document.write(quadrado(3));
+
+		// if ternário -  numero % 2 === 0 ? "par" : "impar";
+
+		let par_ou_impar = (numero) => {
+			if (numero % 2 === 0) {
+				return "par";
+			} else {
+				return "impar";
+			}
+		}
+
+		let numeroDigitado = prompt("Digite um numero");
+		document.write(par_ou_impar(parseInt(numeroDigitado)));
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Reflexão - Da abstração a entidade</title>
+
+	<script>
+
+		class Sofa {
+			constructor(lugares, reclinavel, cor){
+				this.lugares = lugares;
+				this.reclinavel = reclinavel;
+				this.cor = cor;
+			}
+
+			reclinaSofa() {
+				if (this.reclinavel === true) {
+					console.log("Reclinou");
+				} else {
+					console.log("Sofá não reclinável");
+				}
+			}
+		}
+
+		/*
+		sofa1 = new Sofa(2, true, "verde");
+		sofa1.reclinaSofa();
+		console.log(sofa1);
+		*/
+
+		// array de objetos
+		let sofas = [];
+
+		sofas.push(new Sofa(2, true, "verde"));
+		sofas.push(new Sofa(4, false, "azul"));
+		sofas.push(new Sofa(2, true, "laranja"));
+		sofas.push(new Sofa(8, false, "amarelo"));
+		sofas.push(new Sofa(20, true, "rosa"));
+		sofas.push(new Sofa(2, false, "marrom"));
+		sofas.push(new Sofa(1, true, "preto"));
+
+		console.log(sofas);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Configuração Babel</title>
+
+	<!-- 
+		Babel 
+		Compilador do ES6 para navegadores que ainda usam o ES5
+	-->
+	<script async src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+		const getMessage = () => "Olá Mundo";
+		document.getElementById("output").innerHTML = getMessage();
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

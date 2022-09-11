@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OO - Pilar da abstração</title>
+
+	<script>
+
+		// modelo do objeto // receita do bolo
+		class ContaBancaria { // usar letras maiusculas
+			// agencia
+			// numeroConta
+			// saldo
+			// limite
+
+			// o construtor é o método que constroi o objeto
+			constructor() { // constroi nosso objeto // faz o bolo
+				// o this. conecta o atributo ao contexto do objeto
+				this.agencia = 1075;
+				this.numeroConta = 8351125;
+				this.saldo = 50;
+				this.limite = 450;
+			}
+
+			// as ações decladaras dentro de um modelo são métodos
+			// dentro do modelo de objeto não precisamos usar o function
+			depositar(valorDeposito) {
+				this.saldo += valorDeposito;
+			}
+
+			sacar(valorSaque) {
+				this.saldo -= valorSaque;
+			}
+
+			consultarSaldo() {
+				return this.saldo;
+			}
+		}
+
+		// cria um objeto do modelo ContaBancaria e instancia na variavel x
+		let x = new ContaBancaria();
+		let y = new ContaBancaria();
+
+		x.depositar(150);
+		console.log(x.consultarSaldo());
+		x.sacar(200);
+		console.log(x.consultarSaldo());
+
+		// preserva o valor da instancia y que foi definido no constructor
+		console.log(y.consultarSaldo());
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

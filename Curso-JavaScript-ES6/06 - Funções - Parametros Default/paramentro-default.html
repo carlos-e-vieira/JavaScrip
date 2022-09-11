@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funções - Parametros Default</title>
+
+	<script>
+		
+		// passa valores default para os paramentros da function
+		function contarUmaHistoria(personagem = "Fubá", atividade = "morder bola", nome_dono = "Carlos") {
+			document.write(`Éra uma vez um cachorro ${personagem}, ele adorava ${atividade}, seu era o ${nome_dono} e eles viveram felizes para sempre.`);
+		}
+
+		// imprime com valor default
+		contarUmaHistoria();
+
+		document.write("<hr>");
+
+		// os valores passado no paramentro substituem o valor deafault
+		contarUmaHistoria("Faisca", "morder pessoas", "Rosa");
+
+		document.write("<hr>");
+
+		// deixar o primeiro paramentro com o valor default da function
+		contarUmaHistoria(undefined, "morder pessoas", "Rosa");
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

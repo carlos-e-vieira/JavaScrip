@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Declaração de variaveis var e let</title>
+
+	<script>
+
+		// 3 escopos, global, função e bloco
+		// o let preserva o escopo
+		// o var sob ao escopo superior
+		
+		// escopo de bloco
+		if (true) {
+			let serie = "Friends";
+			console.log(serie);
+		}
+
+		// escopo global
+		console.log(serie);
+		
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

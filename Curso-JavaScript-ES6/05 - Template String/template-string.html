@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template String</title>
+
+	<script>
+		let nome = "Carlos";
+
+		// padrão
+		console.log(`Olá ${nome}, tudo bem?`);
+
+		// quebra de linha
+		console.log(`
+			Olá ${nome}, 
+			tudo bem?
+		`);
+
+		// soma
+		console.log(`7 x 7 = ${7*7}`);
+
+		// execultar funções no template string
+		function calcular(x, y) {
+			return x * y;
+		}
+
+		console.log(`A multiplicação de 8 x 8 é ${calcular(8,8)}`)
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

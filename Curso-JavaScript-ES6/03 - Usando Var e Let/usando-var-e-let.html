@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Usando var e let</title>
+
+	<script>
+		
+		// o let amarra a variavel ao escopo em que ela foi declarada
+		let serie = "Friends";
+
+		if (true) {
+			// var sobreescreve o valor da variavel no escopo global
+			// let não sobreescreve o valor da variavel no escopo global
+			let serie = "The Walking Dead";
+			console.log("dentro do bloco " +  serie);
+		}
+
+		console.log("fora do bloco " + serie);
+
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

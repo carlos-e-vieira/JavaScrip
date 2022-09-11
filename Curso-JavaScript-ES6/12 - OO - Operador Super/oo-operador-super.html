@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OO - Operador super()</title>
+
+	<script>
+
+		// super class
+		class Animal {
+			constructor(cor, tamanho, peso) {
+				this.cor = cor; // atributo herdado por cachorro, passaro e papagaio
+				this.tamanho = tamanho; // atributo herdado por cachorro, passaro e papagaio
+				this.peso = peso;
+			}
+
+			// método que vai ser usado no objeto cachorro, passaro e papagaio
+			dormir() {
+				console.log("Dormir");
+			}
+		}
+
+		class Passaro extends Animal {
+			constructor(bico, cor, tamanho, peso) {
+				super(cor, tamanho, peso); // chama atributos e métodos da class pai
+				this.bico = bico; // atributo que vai ser herado por Papagaio
+			}
+
+			// método que vai ser herado por Papagaio
+			voar() {
+				console.log("Voar");
+			}
+		}
+
+		// Class filha da filha de Animal - Animal -> Passaro -> Papagaio
+		class Papagaio extends Passaro {
+			constructor(sabeFalar, cor, tamanho, peso) {
+				super("Médio", cor, tamanho, peso); // passa um paramentro para o construtor da class Passaro
+				this.sabeFalar = sabeFalar;
+			}
+
+			falar() {
+				console.log("Falar");
+			}
+		}
+
+		// passa um paramentro para o constructor da class
+		let papagaio = new Papagaio(true, "Verde", 25, 350); 
+		console.log(papagaio);
+
+		let papagaio2 = new Papagaio(false, "Amarelo", 32, 250);
+		console.log(papagaio2);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

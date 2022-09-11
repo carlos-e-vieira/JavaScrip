@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Reflexão - Da abstração a entidade</title>
+
+	<script>
+		/*
+		// software de marcenaria
+		// cadeira e sofá
+
+		// paradigma procedural
+
+		// array de cadeiras
+		let cadeiras = [];
+
+		cadeiras[0] = [];
+		cadeiras[0]["pernas"] = 4;
+		cadeiras[0]["giratoria"] = false;
+		cadeiras[0]["cor"] = "verde";
+
+		cadeiras[1] = [];
+		cadeiras[1]["pernas"] = 1;
+		cadeiras[1]["giratoria"] = true;
+		cadeiras[1]["cor"] = "azul";
+
+
+		function gira_cadeira(indice) {
+			if(cadeiras[indice]["giratoria"] === true) {
+				console.log("girou");
+			} else {
+				console.log("A cadeira não é giratória");
+			}
+		}
+
+		function adicionar_cadeira(pernas, giratoria, cor) {
+			let cadeira = [];
+
+			cadeira["pernas"] = pernas;
+			cadeira["giratoria"] = giratoria;
+			cadeira["cor"] = cor;
+
+			cadeiras.push(cadeira);
+		}
+
+		adicionar_cadeira(6, false, "amarela");
+
+		console.log(cadeiras);
+		//gira_cadeira(0);
+		*/
+
+
+		// paradgma de OO
+		class Cadeira {
+			constructor(pernas, giratoria, cor) {
+				this.pernas = pernas;
+				this.giratoria = giratoria;
+				this.cor = cor;
+			}
+
+			giraCadeira() {
+				if (this.giratoria === true) {
+					console.log("Girou");
+				} else {
+					console.log("A cadeira não é giratória");
+				}
+			}
+		}
+
+		// passa os paramentros do construtor do objeto
+		/*
+		let cadeira = new Cadeira(1, true, "roxa");
+		let cadeira2 = new Cadeira(4, false, "laranja");
+		let cadeira3 = new Cadeira(3, false, "amarela");
+		*/
+
+		// array com o objeto
+		let cadeiras = [];
+		cadeiras.push(new Cadeira(1, true, "roxa"));
+		cadeiras.push(new Cadeira(3, false, "verde"));
+		cadeiras.push(new Cadeira(1, true, "amarela"));
+		cadeiras.push(new Cadeira(5, false, "azul"));
+		cadeiras.push(new Cadeira(1, true, "lilas"));
+		cadeiras.push(new Cadeira(1, false, "preta"));
+
+		console.log(cadeiras);
+		//cadeira.giraCadeira();
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
