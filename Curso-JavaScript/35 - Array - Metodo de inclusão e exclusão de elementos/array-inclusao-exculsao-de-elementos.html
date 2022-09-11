@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Array - Metodo de inclusão e exclusão de elementos</title>
+	<script>
+		
+		/* Usando os métods de inclusão de exclusão em array simples
+		var lista_frutas = [];
+		lista_frutas[0] = "Banana";
+		lista_frutas[1] = "Maça";
+
+		// .unshift() - método de incluir um elemento no inicio do array
+		//lista_frutas.unshift("Manga");
+
+		// .push() - método de incluir um elemento no final do array
+		//lista_frutas.push("Uva");
+
+		// .shift() - método para excluir um elemento no inicio do array
+		//lista_frutas.shift();
+
+		// .pop() - método para excluir um elemento no final do array
+		lista_frutas.pop();
+
+		console.log(lista_frutas)
+		*/
+
+
+		// Usando os métods de inclusão de exclusão em arrays multidimensionais
+		var lista_coisas = [];
+		lista_coisas["lista_frutas"] = Array();
+		lista_coisas["lista_pessoas"] = [];
+
+		// .push() - método de incluir um elemento no final do array
+		// inclui um elemento no array dentro do array lista coisas
+		lista_coisas["lista_frutas"].push("Banana");
+		lista_coisas["lista_frutas"].push("Uva");
+
+		lista_coisas["lista_pessoas"].push("Carlos");
+
+		console.log(lista_coisas);
+
+	</script>
+</head>
+<body>
+	 
+</body>
+</html>

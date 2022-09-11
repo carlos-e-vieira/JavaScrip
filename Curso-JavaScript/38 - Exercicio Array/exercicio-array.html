@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Exercicio</title>
+	
+	<script>
+
+		var lista_objetos = ["Cadeira", "Impressora", "Garfo"];
+
+		// função para adicionar novo item na lista
+		function adicionaObjeto() {
+			// pega valor do input
+			var valor = document.getElementById("campo_texto").value;
+
+			// verifica se o campo está vazio
+			if (valor === "" || valor === null) {
+
+				alert("Informe um valor válido");
+
+			} else {
+
+				if (lista_objetos.indexOf(valor) != -1) {
+					alert("Objeto já foi adicionado");
+					document.getElementById("campo_texto").value = "";
+				} else {
+					lista_objetos.push(valor);
+					console.log(lista_objetos);
+					document.getElementById("campo_texto").value = "";
+				}
+			}
+		}
+
+		// function para ordenar os elementos do array em ordem alfabética
+		function ordenaItens () {
+			lista_objetos.sort();
+			console.log(lista_objetos);
+		}
+		
+	</script>
+	
+</head>
+<body>
+	 <input id="campo_texto" type="text" name="" placeholder="">
+
+	 <button onclick="adicionaObjeto()" type="button">Adicionar</button>
+
+	 <button onclick="ordenaItens()" type="button">Ordenar</button>
+</body>
+</html>

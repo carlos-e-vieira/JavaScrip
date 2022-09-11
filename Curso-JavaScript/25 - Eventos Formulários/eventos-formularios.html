@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos Janela</title>
+
+	<script>
+		/* 
+			onfucus -> acionado quando o elemento recebe o focu do cursor do mouse.
+		*/
+
+		/* 
+			onblur  -> acionado quando o elemento perde o focu.
+		*/
+
+		/* 
+			onchange -> acionado quando o estado do elemento é modificado. É muito comum em elementos do tipo select
+		*/	
+
+		function acao() {
+			console.log("Evento disparado");
+		}
+
+		function acao2() {
+			alert("Evento disparado");
+		}
+
+	</script>
+
+</head>
+<body>
+	<!-- 
+		onfucus -> acionado quando o elemento recebe o focu do cursor do mouse.
+	-->
+	<h4>onfucus - acionado quando elemento recebe focu</h4>
+	<input onfocus="acao()" type="text">
+
+	<hr>
+
+	<!-- 
+		onblur  -> acionado quando o elemento perde o focu.
+	-->
+	<h4>onblur - acionado quando o elemento perde o focu</h4>
+	<input onblur="acao()" type="text">
+
+	<hr>
+
+	<!-- 
+		onchange -> acionado quando o estado do elemento é modificado. É muito comum em elementos do tipo select
+	-->
+	<h4>onchange - acionado quando o estado do elemento é modificado</h4>
+	<select onchange="acao(); acao2();">
+		<option>-- Selecione --</option>
+		<option value="1">Primeira opção</option>
+		<option value="2">Segunda opção</option>
+	</select>
+
+	<hr>
+
+	
+</body>
+</html>

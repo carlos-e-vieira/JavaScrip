@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>DOM - Manipulando valor input - text</title>
+
+	<script>
+		function distribuiCaracter() {
+			// selecionar o valor digitado e guarda na variavel
+			// o atributo .value recupera o valor de dentro do elemento
+			var caracter = document.getElementById("caracter-digitado").value;
+
+			// limpar o campo de digitação
+			document.getElementById("caracter-digitado").value = "";
+
+			// limpar espaços em brancos nas extremidades da string
+			caracter.trim();
+
+			switch(caracter){
+				case "0":
+				case "1":
+				case "2":
+				case "3":
+				case "4":
+				case "5":
+				case "6":
+				case "7":
+				case "8":
+				case "9":
+					// adicionar o caracter no input números
+					// setar valor de uma variavel no elemento
+					document.getElementById("numeros").value += caracter;
+					break;
+
+				default:
+					// adicionar o caracter no input letras
+					// setar valor de uma variavel no elemento
+					document.getElementById("letras").value += caracter;
+			}
+		}		
+	</script>
+</head>
+<body>
+	<!-- onkeyup só execultado após o evento de inclusão de caracter -->
+	<input 
+		onkeyup="distribuiCaracter()" 
+		type="text" 
+		placeholder="Digite um caracter aqui" 
+		id="caracter-digitado"
+	>
+
+	<hr>
+	<span>Letras</span>
+	<input id="letras" type="" disabled="disabled" >
+
+	<span>Números</span>
+	<input id="numeros" type="" disabled="disabled">
+	
+</body>
+</html>

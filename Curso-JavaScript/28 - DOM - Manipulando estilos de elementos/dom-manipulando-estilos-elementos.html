@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>DOM - Manipulando estilos de elementos</title>
+
+	<script>
+		function modificaEstilo(corDeFundo, largura, altura) {
+			// o atributo .style acessa os atributos do css do elemento
+			document.getElementById("quadrado").style.backgroundColor = corDeFundo;
+			document.getElementById("quadrado").style.width = largura;
+			document.getElementById("quadrado").style.height = altura;
+		}	
+	</script>
+</head>
+<body>
+	<h3>Manipular estilos</h3>
+
+	<!-- #FF0000 é o paramentro pasado para a function -->
+	<button type="button" onclick="modificaEstilo('#FF0000', '100px', '100px')">Vermelho</button>
+	<button type="button" onclick="modificaEstilo('#00FF00', '200px', '200px')">Verde</button>
+	<button type="button" onclick="modificaEstilo('#0000FF', '300px', '300px')">Azul</button>
+	<hr>
+
+	<div id="quadrado" style="border: 1px solid #000; width: 100px; height: 100px;"></div>
+</body>
+</html>

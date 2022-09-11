@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos Mouse</title>
+
+	<script>
+		/*
+		function acao() {
+			alert("Evento disparado");
+		}
+		*/
+
+		function acao1() {
+			alert("Elemento clicado");
+		}
+
+		function acao2() {
+			alert("O cursor do mouse deixou a regição do elemento");
+		}
+
+	</script>
+
+</head>
+<body style="font-family: Helvetica, sans-serif; display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+	<!-- 
+		Os eventos são declarados nos elementos html utilizando a sintaxe de propriedade.
+		A codificação passado no evento, é uma codificação JavaScript normal
+	-->
+
+	
+	<div style="padding: 10px; text-align: center;">
+		<!-- onclick -> evento disparado quando o elemento é clicado -->
+		<h3>onclick - um click</h3>
+		<div onclick="acao()" style="background: #ccc; height: 150px; width: 150px; margin: 10px;"></div>
+	</div>
+
+	<div style="padding: 10px; text-align: center;">
+		<!-- ondblclick -> evento disparado quando o elemento é clicado 2 vezes -->
+		<h3>ondblclick - duplo click</h3>
+		<div ondblclick="acao()" style="background: blue; height: 150px; width: 150px; margin: 10px"></div>
+	</div>
+
+	<div style="padding: 10px; text-align: center;">
+		<!-- onmouseup -> evento disparado quando o click é liberado -->
+		<h3>onmouseup - segura o click</h3>
+		<div onmouseup="acao()" style="background: black; height: 150px; width: 150px; margin: 10px"></div>
+	</div>
+
+	<div style="padding: 10px; text-align: center;">
+		<!-- onmouseover -> evento disparado quando o cursor do mouse sobrepoem o elemento do brownser -->
+		<h3>onmouseover - passa o mouse sobre</h3>
+		<div onmouseover="acao()" style="background: red; height: 150px; width: 150px; margin: 10px"></div>
+	</div>
+
+	<div style="padding: 10px; text-align: center;">
+		<!-- onmouseout -> evento disparado quando o cursor do mouse sai do elemento do brownser -->
+		<h3>onmouseout - tira o mouse</h3>
+		<div onmouseout="acao()" style="background: green; height: 150px; width: 150px; margin: 10px"></div>
+	</div>
+
+	<!-- 2 eventos ao mesmo tempo -->
+	<div style="padding: 10px; text-align: center;">
+		<h3>2 ações ao mesmo tempo</h3>
+		<div onclick="acao1()" onmouseout="acao2()" style="background: orange; height: 150px; width: 150px; margin: 10px"></div>
+	</div>
+</body>
+</html>

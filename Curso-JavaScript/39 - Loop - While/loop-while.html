@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Loop - While</title>
+	
+	<script>
+
+		var x = 1;
+
+		document.write("inicio <br>");
+
+		/* while normal
+		// condição true
+		while(x <= 10){
+			// código a serem repetidos
+			document.write(x + "<br>");
+			// critério de parada do loop. evita o loop infinito
+			// faz um incremento na variavel x até ela ser igual a condição
+			x++;
+		}
+		 */
+
+		/* while com break 
+		// condição true
+		while(x <= 10){
+			// código a serem repetidos
+			document.write(x + "<br>");
+
+			// a instrução break interrompe o laço de repetição
+			if (x === 7) {
+				break;
+			}
+
+			// critério de parada do loop. evita o loop infinito
+			// faz um incremento na variavel x até ela ser igual a condição
+			x++;
+		}
+		*/
+
+		/* while com continue */
+		while (x <= 10){
+			// o incremento deve ficar acima do continue para evitar o loop infinito
+			x++;
+
+			// quando x for == a 5, ele entrerá no if, assim podendo execultar outra ação
+			if (x === 5) {
+				continue;
+			}
+
+			document.write(x + "<br>");
+			
+		}
+
+		document.write("fim <br>");
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Exercicio</title>
+
+	<script>
+
+		var num1 = prompt("Digite o primeiro número");
+		var operador = prompt("Digite a operação desejada");
+		var num2 = prompt("Digite o segundo número");
+
+		num1 = parseInt(num1);
+		num2 = parseInt(num2);
+
+		function soma(resultado) {
+			var resultado = num1 + num2;
+			return resultado;
+		}
+
+		function subtrai(resultado) {
+			var resultado = num1 - num2;
+			return resultado;
+		}
+
+		if (operador === "+") {
+			document.write("O resultado é: " + soma());
+		} else if (operador === "-") {
+			document.write("O resultado é: " + subtrai());
+		} else {
+			alert("Valor incorreto, digite um operador de + ou -");
+		}
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

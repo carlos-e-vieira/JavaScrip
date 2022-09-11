@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos Teclado</title>
+
+	<script>
+		
+		function acao1() {
+			alert("Evento disparado");
+		}
+
+	</script>
+
+</head>
+<body style="font-family: Helvetica, sans-serif;">
+
+	<!-- Evento onkeydown = aciona o evento quando uma tecla é clicada, o caracter só aparece depois da function for disparada -->
+	<h4>Evento onkeydown = aciona o evento quando uma tecla é clicada</h4>
+	<input onkeydown="acao1()" type="text" >
+
+	<!-- Evento onkeyup = aciona o evento quando uma tecla é clicada, o caracter aparece primeiro e a função é disparada depois -->
+	<h4>Evento onkeyup = aciona o evento quando uma tecla é clicada</h4>
+	<input onkeyup="acao1()" type="text" >
+
+	<!-- Evento onkeydown = aciona o evento quando uma tecla é clicada, o caracter só aparece depois da function for disparada -->
+	<h4>Evento onkeydown = aciona o evento quando uma tecla é clicada, ele ignora teclas que não tem valor de caratere</h4>
+	<input onkeypress="acao1()" type="text" >
+
+</body>
+</html>
