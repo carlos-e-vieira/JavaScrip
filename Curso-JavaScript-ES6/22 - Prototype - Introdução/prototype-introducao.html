@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>22 - Prototype - Introdução</title>
+
+	<script>
+
+		// avião
+		// atributos cor, modelo
+		// método levantar voo
+
+		//objeto literal
+		let a1 = {
+			cor: "Branca",
+			modelo: "Airbus a380",
+			levantarVoo: function() {
+				console.log("O avião decolou");
+			}
+		}
+
+		// funcção construtora
+		let AviaoF = function() {
+			this.cor = "Azul",
+			this.modelo = "Boeing 787",
+			this.levantarVoo = function() {
+				console.log("O avião decolou")
+			}
+		}
+
+		let a2 = new AviaoF();
+
+		// classe
+		class AviaoC {
+			constructor() {
+				this.cor = "Vermelho";
+				this.modelo = "Imbraer E-Jets";
+			}
+
+			levantarVoo() {
+				console.log("O avião decolou");
+			}
+		}
+
+		let a3 = new AviaoC();
+
+		console.log(a1);
+		console.log(a2);
+		console.log(a3);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Destructuring Assignment parte 2</title>
+
+	<script>
+
+		let produto = {
+			descricao: "Notebook",
+			preco: 1800,
+			detalhes: {
+				fabricante: "abc",
+				modelo: "xyz"
+			}
+		}
+
+		// token do destructuring
+		// array []
+		// objeto {}
+
+		//let {descricao, preco} = produto;
+		
+		// adiciona a descrição do objeto literal a variavel d => descricao: d
+		//let {descricao: d, preco: p} = produto;
+		
+		//let {descricao: d, preco: p, desconto: d2 = "35%"} = produto;
+
+		// extrair objeto de dentro de outro objeto
+		let { detalhes: {fabricante: f, modelo: m} } = produto;
+		console.log(f, m);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
