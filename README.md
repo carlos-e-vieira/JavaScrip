@@ -1,2 +1,2 @@
 # JavaScrip
-Estudo e Desafios com a Linguagem JavaScript
+Estudos e desafios da Linguagem JavaScript
