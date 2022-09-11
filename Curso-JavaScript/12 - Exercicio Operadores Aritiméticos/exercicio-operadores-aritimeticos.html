@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Exercicio Operadores Aritiméticos</title>
+
+	<script>
+
+		var nome = prompt("Digite seu nome:");
+		var altura = prompt("Digite a sua altura:");
+		var peso = prompt("Digite o seu peso");
+		altura = parseFloat(altura);
+		peso = parseFloat(peso);
+
+		var altura = altura / 100;
+		var massaCorporal = peso / (altura * altura);
+		var resultado = "";
+
+		if (massaCorporal < 16) {
+			resultado = "Baixo peso muito grave";
+		} else if (massaCorporal >= 16 && massaCorporal < 17) {
+			resultado = "Baixo peso grave";
+		} else if (massaCorporal >= 17 && massaCorporal < 18.50) {
+			resultado = "Baixo peso";
+		} else if (massaCorporal >= 18.50 && massaCorporal < 24.50) {
+			resultado = "Peso normal";
+		} else if (massaCorporal >= 25 && massaCorporal < 30) {
+			resultado = "Sobrepeso";
+		} else if (massaCorporal >= 30 && massaCorporal < 35) {
+			resultado = "Obesidade grau I";
+		} else if (massaCorporal >= 35 && massaCorporal < 40) {
+			resultado = "Obesidade grau II";
+		} else {
+			resultado = "Obesidade grau III";
+		}
+
+		document.write(nome + " possui índice de massa corporal igual a " + massaCorporal + ", sendo classificado como: " + resultado + ".");
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

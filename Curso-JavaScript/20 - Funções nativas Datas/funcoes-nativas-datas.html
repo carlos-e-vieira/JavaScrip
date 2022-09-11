@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Funções nativas Datas</title>
+
+	<script>
+
+		// cria a instancia do objeto Date()
+		//var data = new Date();
+
+		// getDate() -> dia | getMonth() + 1 -> mês | getFullYear -> ano
+		//document.write(data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()  + "<br><br>");
+
+		/*
+		var data = new Date();
+
+		// adicionar / remover dias
+		document.write(data.toString());
+		data.setDate(data.getDate() + 365);
+		document.write("<hr>");
+		document.write(data.toString());
+
+		document.write("<br><br><hr><br>");
+
+		// adicionar / remover meses
+		document.write(data.toString());
+		data.setMonth(data.getMonth() + 1);
+		document.write("<hr>");
+		document.write(data.toString());
+
+		document.write("<br><br><hr><br>");
+
+		// adicionar / remover anos
+		document.write(data.toString());
+		data.setFullYear(data.getFullYear() + 1);
+		document.write("<hr>");
+		document.write(data.toString());
+		*/
+
+		// calculos entre datas
+		// 15/01/2017
+		var data1 = new Date(2017, 0, 15);
+
+		// 23/02/2017
+		var data2 = new Date(2017, 1, 23);
+
+		document.write(data1.toString());
+		document.write("<hr>");
+		document.write(data2.toString());
+
+		document.write("<br><br><hr>");
+		// converter nossas datas para algo que possamos calcular
+		document.write(data1.getTime());
+		document.write("<hr>");
+		document.write(data2.getTime());
+
+		// getTime() inicia em 1 de Janeiro de 1970 - Padrão computacional
+		document.write("<br><br><hr>");
+		
+		// encontrar a quantidade de milisegundos entre data1 e data2
+		// método Math.abs() - retorna o valor absoluto de um numero
+		var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime());
+		document.write(milisegundos_entre_datas);
+
+		// descobrir a diferença de dias em milisegundos
+		// 1 dia tem 24 horas, 1 hora tem 60 minutos, 1 minuto tem 60 
+		// segundos, 1 segundo tem 1000 milisegundos
+		// quantos milisegundos existe em um dia?
+		var milisegundos_dia = 1*24*60*60*1000;
+		document.write("1 dia tem: " + milisegundos_dia + " milisegundos");
+
+		document.write("<br><br><hr>");
+		// Math.ceil() arredonda o valor para cima
+		document.write("A diferençã entre data1 e data2 é de " + Math.ceil(milisegundos_entre_datas / milisegundos_dia) + " dias.");
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Escopo de variáveis</title>
+
+	<script>
+
+		// 3 escopos: global, função e o de bloco
+
+		// escopo global
+		var serie = "Friends"; 
+
+		// escopo de bloco
+		if (true) {
+			var serie2 = "Game of Thrones";
+			document.write(serie);
+		}
+
+		// execulta o escopo bloco no global
+		// escopo de bloco pode ser execultado no global e na função
+		document.write(serie2);
+
+		document.write("<br><br>");
+
+		function x() {
+
+			// escopo da função
+			// o escopo da função só pode ser executado na função
+			var serie3 = "The Walking Dead";
+
+			document.write(serie);
+			// execulta o escopo bloco na função
+			document.write(serie2);
+		}
+
+		x();
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

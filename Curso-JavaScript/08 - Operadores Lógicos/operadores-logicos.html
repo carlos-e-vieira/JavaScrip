@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Operadores Lógicos</title>
+
+	<script>
+
+		var nota = prompt("Digite a nota do aluno");
+		var faltas = prompt("Digite o número de faltas do aluno");
+		var media = 7;
+		var faltasToleradas = 15;
+
+		/*
+		if(nota >= media && faltas <= faltasToleradas) {
+			document.write("Aluno aprovado");
+		} else {
+			document.write("REPROVADO");
+		}
+		*/
+		
+		// Operador ternário -> 1 condição - 2 true - 3 false
+		var resultado = (nota >= media && faltas <= faltasToleradas) ? "Aprovado" : "REPROVADO";
+
+		document.write(resultado);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

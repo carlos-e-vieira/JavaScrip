@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Função - Flexibilidade de Paramentros</title>
+
+	<script>
+
+		function soma(a, b){
+			if(a === undefined || a === null){
+				a = 0;
+			} else {
+				a = a;
+			}
+			if(b === undefined || a === null){
+				b = 0;
+			} else {
+				b = b;
+			}
+			
+			return a + b;
+		}
+
+		console.log(soma(7,7));
+		
+		// desconsidera os paramentros adicionais
+		console.log(soma(7,7, 9, 15));
+		
+		// Not a Number - erro por falta do segundo paramentro da function
+		console.log(soma(7));
+
+		// Not a Number - erro por falta dos 2 paramentros da function
+		console.log(soma());
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
