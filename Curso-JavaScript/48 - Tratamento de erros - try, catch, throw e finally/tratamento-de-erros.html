@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Tratamento de erros - try, catch, throw e finally</title>
+	
+	<script>
+
+		/*
+			Observações:
+			
+		*/
+
+		// netflix
+		var video = [];
+
+		// cria um novo array no indice 1
+		video[1] = [];
+		video[1]["nome"] = "Fullmetal Alchimist";
+		video[1]["categoria"] = "Anime";
+
+		function getVideo(video) {
+			
+			// try - trata o erro e não mata a apkicação
+			try {
+				// lógica
+				// http
+				console.log(video[0]["nome"]);
+			}
+			// o erro vai continuar acontecendo, mas não teremos uma parada na aplicação
+			catch(erro_por_paramentro) {
+				tratarErro(erro_por_paramentro);
+				console.log("Agora sim podemos tratar esse erro");
+				// força a interrupção do script
+				throw new Error("Houve um erro mas não se preocupe, estamos trabalhando nisso agora.");
+			}
+			finally {
+				console.log("Sempre passa por aqui (try / catch)")
+			}
+
+			console.log("A aplicação não morreu");
+		}
+
+		function tratarErro(erro_por_paramentro) {
+			// lógica para registrar o erro no servidor
+			console.log(erro_por_paramentro);
+		}
+
+		getVideo(video);
+
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

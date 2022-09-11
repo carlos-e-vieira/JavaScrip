@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Loop - Exercicío</title>
+	
+	<script>
+
+		var lista_frutas = [];
+
+		lista_frutas[0] = "Banana";
+		lista_frutas[1] = "Maça";
+		lista_frutas[2] = "Morango";
+		lista_frutas[3] = "Uva";
+
+		for(var i = 0; i < lista_frutas.length; i++) {
+			document.write(lista_frutas[i] + "<br>");
+		}
+
+		document.write("<br><hr><br>");
+
+		// taboada
+		var num1 = 1;
+		var num2 = 1;
+
+		while(num1 <= 10){
+			
+			num2 = 1;
+
+			while(num2 <= 10){
+
+				document.write(num1 + " x " + num2 + " = " + (num1 * num2) + "<br>");
+				num2++;
+			}
+			num1++;
+			document.write("<br>");
+		}
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

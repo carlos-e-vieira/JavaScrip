@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Loop - Foreach</title>
+	
+	<script>
+		/*
+			Observações:
+			o forEach é uma função que pertence ao objeto array.
+		*/
+
+		var listaFuncionarios = ["Viviane", "Rosangela", "Miguel", "Lucas", "Fernanda"];
+
+		// cria uma variavel para encapsular a função de callback para o forEach
+		var f = function(valor, indice) {
+			console.log(valor, indice);
+		}
+
+		// receber apena um paramentro
+		listaFuncionarios.forEach(f);
+
+		/*
+		console.log(listaFuncionarios);
+
+		// função forEach
+		// cria uma função de callback para ser colocada no paramentro
+		listaFuncionarios.forEach(function(valor, indice, array) {
+			// lógica que será execultada para cada indice do array
+			console.log("indice: " + indice + " | valor: " + valor);
+			
+			// subistituindo valor do array
+			if (valor == "Lucas") {
+				array[indice] = "Carlos";
+			} 
+
+		});
+		console.log(listaFuncionarios);
+		*/
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

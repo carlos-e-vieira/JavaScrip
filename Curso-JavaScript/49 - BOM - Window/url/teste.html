@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>BOM - Window</title>
+	
+	<script>
+
+		/*
+			Observações:
+			Documentação oficial e métodos do objeto Window
+			https://www.w3schools.com/js/js_window.asp
+		*/
+
+		function abrirPopUp() {
+			// 1 paramentro - url ou link interno
+			// 2 paramentro - nome opcional
+			// 3 paramentro - especificações da janela
+			window.open("http://www.google.com", "nova_janela", "width=200, height=400");
+		}
+
+	</script>
+	
+</head>
+<body>
+
+	<button onclick="abrirPopUp()" type="button">Abrir Janela</button>
+	<button onclick="fecharJanela()" type="button">Fechar Janela</button>
+
+</body>
+</html>

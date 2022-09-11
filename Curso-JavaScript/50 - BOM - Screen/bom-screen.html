@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>BOM - Screen</title>
+	
+	<script>
+
+		/*
+			Observações:
+			
+		*/
+
+		// altura e largura da janela excluindo a barra de ferramentas
+		var altura = window.screen.availHeight;
+		var largura = window.screen.availWidth;
+
+		//document.write("Altura do navegador é " + altura + "<br>");
+		//document.write("Largura do navegador é " + largura);
+
+		if(largura < 500) {
+			document.write("Lógica para impressão de menu versão mobile");
+		} else {
+			document.write("Lógica para impressão de menu versão web");
+		}
+
+	</script>
+	
+</head>
+<body>
+
+
+
+</body>
+</html>

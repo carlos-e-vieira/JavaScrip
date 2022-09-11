@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Loop - For in</title>
+	
+	<script>
+		/*
+			Observações:
+			Do lado direito fica a variavel, e do esquerdo o array a ser percorrido.
+			O in vai percorrer até o final do array.
+		*/
+
+		/*
+		var listaConvidados = ["Jorge", "Jamilton", "José", "Ana", "Maria"];
+
+		console.log(listaConvidados);
+
+		for( var x in listaConvidados) {
+			// recupera só o indice
+			//console.log(x);
+
+			// recupera o valor dos indices
+			console.log("Índice " + x + " valor " + listaConvidados[x]);
+		}
+		*/
+
+		// usando o for in em indices aleatórios
+		var listaConvidados = [];
+
+		listaConvidados[1] = "Carlos";
+		listaConvidados["zebra"] = "Eliana";
+		listaConvidados[-7] = "Marcia";
+		listaConvidados[false] = "Dandara";
+		listaConvidados[true] = "Mariana";
+
+		console.log(listaConvidados);
+
+		for( var x in listaConvidados) {
+			// recupera só o indice
+			//console.log(x);
+
+			// recupera o valor dos indices
+			console.log("Índice " + x + " valor " + listaConvidados[x]);
+		}
+
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>
